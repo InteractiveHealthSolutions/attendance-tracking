@@ -4,7 +4,7 @@
   <groupId>com.ihs</groupId>
   <artifactId>ats</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Archetype - ats</name>
+  <name>ats</name>
   <url>http://maven.apache.org</url>
   
   <packaging>pom</packaging>
@@ -12,5 +12,21 @@
   	<module>ats-api</module>
   	<module>ats-web</module>
   </modules>
+  
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+	
 </project>
 
