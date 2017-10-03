@@ -14,10 +14,8 @@ public class AtsMain {
 	
     @RequestMapping(method = RequestMethod.GET )
     public String printHello(ModelMap model) {
- 	   
- 	   
-       model.addAttribute("message", "Hello Spring MVC Framework!");
- 
-       return "index";
+ 	    System.out.println("INDEX CONTROLLER");
+    	model.addAttribute("message", "Hello Spring MVC Framework!");
+ 	    return "index";
     }
 }
