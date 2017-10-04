@@ -8,8 +8,7 @@ import java.util.Properties;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import com.mysql.jdbc.StringUtils;
+import org.springframework.util.StringUtils;
 
 public class HibernateUtil {
 	
@@ -58,7 +57,7 @@ public class HibernateUtil {
 				conf.setProperties(properties);
 			}
 			
-			if(!StringUtils.isEmptyOrWhitespaceOnly(configFileName)){
+			if(configFileName != null && !StringUtils.isEmpty(configFileName)){
 				conf.configure(configFileName);
 			}
 			else {

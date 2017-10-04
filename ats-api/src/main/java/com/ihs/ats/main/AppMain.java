@@ -1,29 +1,15 @@
 package com.ihs.ats.main;
 
-import javax.transaction.Transaction;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import com.ihs.ats.api.*;
-import com.ihs.ats.model.dao.*;
-//import com.springhibernatesample.dao.ContactDao;
-//import com.springhibernatesample.model.Contacts;
 
-@SpringBootApplication
+import com.ihs.ats.model.dao.hibernatedimpl.HibernateUtil;
+
 public class AppMain {
 
 	public static void main(String[] args) {
-		Configuration cfg=new Configuration();
-		
 		System.out.println("I am here");
-		cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file	
-		SessionFactory factory=cfg.buildSessionFactory();	
+		SessionFactory factory=HibernateUtil.getSessionFactory(null, null);	
 		Session session=factory.openSession();	
 		org.hibernate.Transaction t= session.beginTransaction();
 //		session.close();
