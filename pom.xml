@@ -4,7 +4,7 @@
   <groupId>com.ihs</groupId>
   <artifactId>ats</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Archetype - ats</name>
+  <name>ats</name>
   <url>http://maven.apache.org</url>
   
   <packaging>pom</packaging>
@@ -12,5 +12,14 @@
   	<module>ats-api</module>
   	<module>ats-web</module>
   </modules>
+  
+  	
+	<properties>
+		<maven.test.failure.ignore>true</maven.test.failure.ignore>
+		<spring.framework.version>4.2.3.RELEASE</spring.framework.version>
+		<hibernate.version>4.0.1.Final</hibernate.version>
+		<sl4j.version>1.6.4</sl4j.version>
+		<junit.version>4.4</junit.version>
+	</properties>
 </project>
 
