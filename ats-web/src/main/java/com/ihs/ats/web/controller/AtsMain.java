@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/index")
+@RequestMapping("/home")
 public class AtsMain {
 
 	
@@ -16,6 +16,6 @@ public class AtsMain {
     public String printHello(ModelMap model) {
  	    System.out.println("INDEX CONTROLLER");
     	model.addAttribute("message", "Hello Spring MVC Framework!");
- 	    return "index";
+ 	    return "home";
     }
 }
